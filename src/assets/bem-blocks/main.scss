@@ -421,30 +421,30 @@ button {
 }
 
 .film-card__controls-item--add-to-watchlist {
-  background-image: url('/src/assets/img/icons/icon-watchlist.svg');
+  background-image: url('/assets/img/icons/icon-watchlist.svg');
   background-size: 17px 15px;
 }
 
 .film-card__controls-item--mark-as-watched {
-  background-image: url('/src/assets/img/icons/icon-watched.svg');
+  background-image: url('/assets/img/icons/icon-watched.svg');
   background-size: 14px 10px;
 }
 
 .film-card__controls-item--favorite {
-  background-image: url('/src/assets/img/icons/icon-favorite.svg');
+  background-image: url('/assets/img/icons/icon-favorite.svg');
   background-size: 18px 18px;
 }
 
 .film-card__controls-item--active.film-card__controls-item--add-to-watchlist {
-  background-image: url('/src/assets/img/icons/icon-watchlist-active.svg')
+  background-image: url('/assets/img/icons/icon-watchlist-active.svg')
 }
 
 .film-card__controls-item--active.film-card__controls-item--mark-as-watched {
-  background-image: url('/src/assets/img/icons/icon-watched-active.svg')
+  background-image: url('/assets/img/icons/icon-watched-active.svg')
 }
 
 .film-card__controls-item--active.film-card__controls-item--favorite {
-  background-image: url('/src/assets/img/icons/icon-favorite-active.svg')
+  background-image: url('/assets/img/icons/icon-favorite-active.svg')
 }
 
 
@@ -715,29 +715,29 @@ button {
   background-color: transparent;
 }
 .film-details__control-label--watchlist::before {
-  background: url("/src/assets/img/icons/icon-watchlist.svg") no-repeat;
+  background: url("/assets/img/icons/icon-watchlist.svg") no-repeat;
   background-size: 17px 15px;
 }
 .film-details__control-label--watched::before {
-  background: url("/src/assets/img/icons/icon-watched.svg") no-repeat;
+  background: url("/assets/img/icons/icon-watched.svg") no-repeat;
   background-size: 17px 10px;
   top: 7px;
 }
 .film-details__control-label--favorite::before {
-  background: url("/src/assets/img/icons/icon-favorite.svg") no-repeat;
+  background: url("/assets/img/icons/icon-favorite.svg") no-repeat;
   background-size: 18px;
 }
 .film-details__control-input:checked + .film-details__control-label {
   color: #f5df00;
 }
 .film-details__control-input:checked + .film-details__control-label--watchlist::before {
-  background-image: url("/src/assets/img/icons/icon-watchlist-active.svg");
+  background-image: url("/assets/img/icons/icon-watchlist-active.svg");
 }
 .film-details__control-input:checked + .film-details__control-label--watched::before {
-  background-image: url("/src/assets/img/icons/icon-watched-active.svg");
+  background-image: url("/assets/img/icons/icon-watched-active.svg");
 }
 .film-details__control-input:checked + .film-details__control-label--favorite::before {
-  background-image: url("/src/assets/img/icons/icon-favorite-active.svg");
+  background-image: url("/assets/img/icons/icon-favorite-active.svg");
 }
 .film-details__comment {
   display: flex;
