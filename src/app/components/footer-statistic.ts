@@ -1,3 +1,4 @@
-export const footerStatistic = (): string => `<section class="footer__statistics">
+export const footerStatistic = (): string =>
+  `<section class="footer__statistics">
     <p>130 291 movies inside</p>
-  </section>`;
+  </section>`.trim();
