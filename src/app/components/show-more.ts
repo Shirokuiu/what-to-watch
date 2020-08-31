@@ -1,1 +1,2 @@
-export const showMore = (): string => `<button class="films-list__show-more">Show more</button>`;
+export const showMore = (): string =>
+  `<button class="films-list__show-more">Show more</button>`.trim();

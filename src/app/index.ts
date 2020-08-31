@@ -9,6 +9,7 @@ import {
   showMore,
   userStatus,
 } from './components';
+import { makeFilm } from '../data/film';
 
 const header: HTMLElement = document.querySelector('.header') as HTMLElement;
 const main: HTMLElement = document.querySelector('.main') as HTMLElement;
@@ -30,10 +31,20 @@ const initFilmsContent = (): void => {
     main.querySelectorAll('.films-list--extra')
   );
 
-  render(filmsContainer.querySelector('.films-list__container') as HTMLElement, filmCard());
+  Array(11)
+    .fill('')
+    .forEach(() => {
+      render(
+        filmsContainer.querySelector('.films-list__container') as HTMLElement,
+        filmCard(makeFilm())
+      );
+    });
   render(filmsContainer.querySelector('.films-list') as HTMLElement, showMore());
   filmsExtraContainer.forEach((container: HTMLElement) => {
-    render(container.querySelector('.films-list__container') as HTMLElement, filmCard());
+    render(
+      container.querySelector('.films-list__container') as HTMLElement,
+      filmCard(makeFilm())
+    );
   });
 };
 

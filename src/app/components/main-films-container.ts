@@ -1,4 +1,5 @@
-export const mainFilmsContainer = (): string => `<section class="films">
+export const mainFilmsContainer = (): string =>
+  `<section class="films">
     <section class="films-list">
       <h2 class="films-list__title visually-hidden">All movies. Upcoming</h2>
 
@@ -24,4 +25,4 @@ export const mainFilmsContainer = (): string => `<section class="films">
         <!-- FilmCard !-->
       </div>
     </section>
-  </section>`;
+  </section>`.trim();
