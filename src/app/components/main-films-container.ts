@@ -1,5 +1,18 @@
-export const mainFilmsContainer = (): string =>
-  `<section class="films">
+import { createElement } from '../shared/utils';
+
+export class MainFilmsContainer {
+  private element: HTMLElement | undefined;
+
+  getElement(): HTMLElement {
+    if (!this.element) {
+      this.element = createElement(this.getTemplate()) as HTMLElement;
+    }
+
+    return this.element;
+  }
+
+  private getTemplate(): string {
+    return `<section class="films">
     <section class="films-list">
       <h2 class="films-list__title visually-hidden">All movies. Upcoming</h2>
 
@@ -26,3 +39,5 @@ export const mainFilmsContainer = (): string =>
       </div>
     </section>
   </section>`.trim();
+  }
+}

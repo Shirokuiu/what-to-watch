@@ -1,13 +1,14 @@
-import { Place } from './shared/enums';
+import { render } from './shared/utils';
+
 import {
-  filmCard,
-  footerStatistic,
-  mainFilmsContainer,
-  mainMenu,
-  mainSearch,
-  mainSort,
-  showMore,
-  userStatus,
+  MainSearch,
+  UserStatus,
+  MainMenu,
+  MainSort,
+  FooterStatistic,
+  MainFilmsContainer,
+  FilmCard,
+  ShowMore,
 } from './components';
 import { makeFilm } from '../data/film';
 
@@ -15,16 +16,16 @@ const header: HTMLElement = document.querySelector('.header') as HTMLElement;
 const main: HTMLElement = document.querySelector('.main') as HTMLElement;
 const footer: HTMLElement = document.querySelector('.footer') as HTMLElement;
 
-const render = (
-  container: HTMLElement,
-  component: string,
-  place: Place = Place.Beforeend
-): void => {
-  container?.insertAdjacentHTML(place, component);
-};
+const mainSearch = new MainSearch();
+const userStatus = new UserStatus();
+const mainMenu = new MainMenu();
+const mainSort = new MainSort();
+const footerStatistic = new FooterStatistic();
 
 const initFilmsContent = (): void => {
-  render(main, mainFilmsContainer());
+  const mainFilmsContainer = new MainFilmsContainer();
+
+  render(main, mainFilmsContainer.getElement());
 
   const filmsContainer: HTMLElement = main.querySelector('.films') as HTMLElement;
   const filmsExtraContainer: HTMLElement[] = Array.from(
@@ -34,23 +35,34 @@ const initFilmsContent = (): void => {
   Array(11)
     .fill('')
     .forEach(() => {
+      const filmCard = new FilmCard(makeFilm());
+
       render(
         filmsContainer.querySelector('.films-list__container') as HTMLElement,
-        filmCard(makeFilm())
+        filmCard.getElement()
       );
     });
-  render(filmsContainer.querySelector('.films-list') as HTMLElement, showMore());
+
+  const showMore = new ShowMore();
+
+  render(
+    filmsContainer.querySelector('.films-list') as HTMLElement,
+    showMore.getElement()
+  );
+
   filmsExtraContainer.forEach((container: HTMLElement) => {
+    const filmCard = new FilmCard(makeFilm());
+
     render(
       container.querySelector('.films-list__container') as HTMLElement,
-      filmCard(makeFilm())
+      filmCard.getElement()
     );
   });
 };
 
-render(header, mainSearch());
-render(header, userStatus());
-render(main, mainMenu());
-render(main, mainSort());
+render(header, mainSearch.getElement());
+render(header, userStatus.getElement());
+render(main, mainMenu.getElement());
+render(main, mainSort.getElement());
 initFilmsContent();
-render(footer, footerStatistic());
+render(footer, footerStatistic.getElement());
