@@ -1,5 +1,5 @@
 import { getRandomInteger } from '../app/shared/utils';
-import { FilmModel } from '../app/shared/models/film.model';
+import { FilmModel } from '../app/shared/models';
 
 export const makeFilm = (): FilmModel => ({
   poster: [

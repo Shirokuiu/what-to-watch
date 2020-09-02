@@ -1,18 +1,34 @@
-import { FilmModel } from '../shared/models/film.model';
+import { FilmModel } from '../shared/models';
+import { createElement } from '../shared/utils';
 
-export const filmCard = ({
-  title,
-  rate,
-  year,
-  genre,
-  poster,
-  description,
-  comments,
-  inWatchlist,
-  watched,
-  isFavorite,
-}: FilmModel): string =>
-  `<article class="film-card">
+export default class FilmCard {
+  private element: HTMLElement | undefined;
+
+  constructor(private film: FilmModel) {}
+
+  getElement(): HTMLElement {
+    if (!this.element) {
+      this.element = createElement(this.getTemplate()) as HTMLElement;
+    }
+
+    return this.element;
+  }
+
+  private getTemplate(): string {
+    const {
+      title,
+      rate,
+      year,
+      genre,
+      poster,
+      description,
+      comments,
+      inWatchlist,
+      watched,
+      isFavorite,
+    } = this.film;
+
+    return `<article class="film-card">
           <h3 class="film-card__title">${title}</h3>
           <p class="film-card__rating">${rate}</p>
           <p class="film-card__info">
@@ -35,3 +51,5 @@ export const filmCard = ({
             }">Mark as favorite</button>
           </form>
         </article>`.trim();
+  }
+}
