@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class ShowMore {
+export class ShowMore {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

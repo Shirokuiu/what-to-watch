@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class MainFilmsContainer {
+export class MainFilmsContainer {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

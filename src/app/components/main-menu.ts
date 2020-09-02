@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class MainMenu {
+export class MainMenu {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

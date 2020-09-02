@@ -1,7 +1,7 @@
 import { FilmModel } from '../shared/models';
 import { createElement } from '../shared/utils';
 
-export default class FilmCard {
+export class FilmCard {
   private element: HTMLElement | undefined;
 
   constructor(private film: FilmModel) {}

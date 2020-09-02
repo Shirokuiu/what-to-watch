@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class UserStatus {
+export class UserStatus {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

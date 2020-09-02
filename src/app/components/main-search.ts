@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class MainSearch {
+export class MainSearch {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

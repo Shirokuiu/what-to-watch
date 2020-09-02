@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class FooterStatistic {
+export class FooterStatistic {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {

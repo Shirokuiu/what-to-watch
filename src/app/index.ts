@@ -1,13 +1,16 @@
 import { render } from './shared/utils';
-import MainSearch from './components/main-search';
-import UserStatus from './components/user-status';
-import MainMenu from './components/main-menu';
-import MainSort from './components/main-sort';
-import FooterStatistic from './components/footer-statistic';
-import MainFilmsContainer from './components/main-films-container';
-import FilmCard from './components/film-card';
+
+import {
+  MainSearch,
+  UserStatus,
+  MainMenu,
+  MainSort,
+  FooterStatistic,
+  MainFilmsContainer,
+  FilmCard,
+  ShowMore,
+} from './components';
 import { makeFilm } from '../data/film';
-import ShowMore from './components/show-more';
 
 const header: HTMLElement = document.querySelector('.header') as HTMLElement;
 const main: HTMLElement = document.querySelector('.main') as HTMLElement;

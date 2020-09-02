@@ -1,6 +1,6 @@
 import { createElement } from '../shared/utils';
 
-export default class MainSort {
+export class MainSort {
   private element: HTMLElement | undefined;
 
   getElement(): HTMLElement {
