@@ -1,17 +1,7 @@
-import { createElement } from '../shared/utils';
+import { Component } from '../../core';
 
-export class MainMenu {
-  private element: HTMLElement | undefined;
-
-  getElement(): HTMLElement {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate()) as HTMLElement;
-    }
-
-    return this.element;
-  }
-
-  private getTemplate(): string {
+export class MainMenuTemplate extends Component {
+  getTemplate(): string {
     return `<nav class="main-navigation">
     <a href="#all" class="main-navigation__item main-navigation__item--active">All movies</a>
     <a href="#watchlist" class="main-navigation__item">Watchlist <span class="main-navigation__item-count">13</span></a>
