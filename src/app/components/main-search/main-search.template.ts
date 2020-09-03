@@ -1,17 +1,7 @@
-import { createElement } from '../shared/utils';
+import { Component } from '../../core';
 
-export class MainSearch {
-  private element: HTMLElement | undefined;
-
-  getElement(): HTMLElement {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate()) as HTMLElement;
-    }
-
-    return this.element;
-  }
-
-  private getTemplate(): string {
+export class MainSearchTemplate extends Component {
+  getTemplate(): string {
     return `<form class="header__search search">
     <input type="text" name="search" class="search__field" placeholder="Search movies">
     <svg fill="#7171D8" class="search__film-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19">

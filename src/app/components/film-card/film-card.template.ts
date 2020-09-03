@@ -1,20 +1,12 @@
-import { FilmModel } from '../shared/models';
-import { createElement } from '../shared/utils';
+import { Component } from '../../core';
+import { FilmModel } from '../../shared/models';
 
-export class FilmCard {
-  private element: HTMLElement | undefined;
-
-  constructor(private film: FilmModel) {}
-
-  getElement(): HTMLElement {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate()) as HTMLElement;
-    }
-
-    return this.element;
+export class FilmCardTemplate extends Component {
+  constructor(private readonly film: FilmModel) {
+    super();
   }
 
-  private getTemplate(): string {
+  getTemplate(): string {
     const {
       title,
       rate,
